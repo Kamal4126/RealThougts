@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+body{
+    margin:0;
+    /* background-color: #f1f1f1; */
+    background-color: #f2f2f2 ;
+    /* background-color: #1E2428 ; */
+    /* background-image: linear-gradient(140deg, #ffffff 20%, #ceccccd2 75%, #ffffff 83%); */
+    font-family: Agency FB;
+    font-size: 19px;
+} 
+/* .header{
+    background-color: black;
+    text-align: center;
+    color:aqua;
+} */
+
+
+#grad1 {
+    /* width:100%; */
+    font-family:Agency FB;
+    text-transform: uppercase;
+    /* background-color: #1a0246; For browsers that do not support gradients         */
+    background-image: linear-gradient(140deg, #49a4aa 10%, #1a0246 50%, #8b4ab1 75%);
+    
+    opacity:0.95;
+
+    text-align:center;
+    color:#f3f3f3;
+    font-size:30px;
+    font-weight:550;
+    padding: 55px;
+    text-shadow: 4px 4px 4px black;
+    letter-spacing:4px;
+    word-spacing:3px;
+}
+
+
+
+
+#navbar{
+    overflow:hidden;
+    font-size: 18px;
+    padding-top: 4px;
+    height: 50px;
+    letter-spacing: 3px;
+    /* color: black; */
+    /* background-color: rgb(10, 177, 99); */
+    background-color: #19181d;
+    text-transform: uppercase;
+}
+#navbar a{
+    float:left;
+    display:block;
+    color: aliceblue;
+    text-align:center;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+#navbar a:hover, .search_bar:hover{
+    background-color: rgb(0,0,0) ;
+    color: aqua;
+}
+.sticky {
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content{
+    padding-top: 36px;
+}
+
+img.logo{
+    float: left;
+    height:27px;    
+    background-attachment: fixed;
+}
+
+
+
+
+/* dropdown menu */
+
+.dropdown{
+    float:left;
+    /* overflow: hidden; */
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown .dropbtn{
+    text-align:center;
+    padding: 10px 25px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;    
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: aliceblue;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 305px;
+    background-color: #19181d;
+    color: aliceblue;
+    z-index: 1;
+}
+
+.dropdown:hover .dropbtn:hover {
+    background-color: black;
+    color: aqua;
+}
+.dropdown-content a:hover {
+    background-color:black;
+    color: aqua;
+}
+
+
+
+
+
+/* search bar */
+
+#navbar .search_bar {
+    float: right;
+}
+
+#navbar input[type=text]{
+    padding:4px;
+    padding-right:60px;
+    margin: 6px;
+    margin-right: 0px;
+    font-size: 19px;
+    font-family: Agency FB;
+    border: none;
+}
+
+.search_bar button{
+    float: right;
+    padding: 4px 6px;
+    margin-top: 6px;
+    margin-right: 25px;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+}
+.search_bar button:hover{
+    background-color:#0dc3c5;
+}
+
+
+
+/* user icon and info  */
+
+.user_icon{
+    float:right;
+    margin-right: 15px;
+    margin-left: 0px;    
+    color: aliceblue;
+    text-align:center;
+    padding: 10px 25px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+.user_icon:hover .user_logout{
+    display: block;
+}
+.user_icon .user_info{
+    text-align:center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;    
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: aliceblue;
+    font-family: inherit;
+    /* margin: 0; */
+}
+.user_icon:hover{
+    display: block;
+    background-color: rgb(0,0,0);
+    color: aqua;
+}
+.user_logout{
+    display: none;
+    position: absolute;
+    margin-top: 12px;
+    min-width: 100px;
+    min-height: 150px;
+    padding: 10px 15px;    
+    background-color: #19181d;
+    color: aliceblue;    
+    z-index: 1;
+}
+.user_icon:hover .user_info:hover .user_info a:hover{
+    background-color: black;
+    color: aqua;
+}
+
+
+
+
+
+
+
+
+/* slideshow carousel */
+.mySlides {display: none}
+.img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  } 
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 0.9s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+
+
+
+
+
+
+
+/* used for the heading of different topics */
+h2{
+    text-align: center;
+    /* background-color: #371e48; */
+    font-size: 130%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    padding: 16px;
+    color: aliceblue;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    background: linear-gradient(140deg, #0dc3c5, #5f5b97 , #8a3c88 );
+}
+
+
+
+.product-box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 0 55px 65px 55px;
+    padding: 38px 50px;
+    letter-spacing: 1px;
+    flex: 1;
+    -ms-flex: 1;    
+    text-decoration: none;
+    color: black;
+    text-decoration-color: none;
+}
+.product-box:hover {
+    background: linear-gradient(140deg, #0dc3c5, #5f5b97 , #8a3c88 );
+    color:aqua;
+    cursor: pointer;
+}
+.imgofproduct{
+    width: 100%;
+    height: 220px;
+    padding-bottom: 10px;
+}
+
+
+.product-description{
+    text-align: left;    
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+
+/* our team */
+
+.ourteam{
+    flex: 1;
+    -ms-flex: 1;    
+    margin: 0 25px 65px 135px;
+}
+
+h1{
+    text-align:center;
+    font-family: inherit;
+    margin-top: 40px;
+}
+.ourteam_img{
+    border-radius: 200px;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 25px;
+}
+.ourteam p{
+    text-align: left;
+    margin: 0 55px 65px 65px;    
+    font-size: 25px;
+    letter-spacing: 1px;
+    
+}
+.ourteam p:hover{
+    color: #bc4cfd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer{
+    background: #191919;
+    color:#8a8a8a;
+    font-size: 17px;
+    padding: 60px 0 20px;
+    
+}
+.footer h3:hover{
+    color: #c665ff;
+}
+.footer p{
+    color:#8a8a8a;
+}
+.footer p:hover{
+    color: aqua;
+}
+.footer h3{
+    color: aliceblue;
+    margin-bottom:20px;
+}
+.footer ul{
+    list-style-type:none;
+}
+.footer-col1, .footer-col2, .footer-col3, .footer-col4{
+    min-width: 250px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+.footer-col1{
+    flex-basis:30%;
+    text-align: justify;
+}
+.footer-col2{
+    flex: 1;
+    text-align: center;
+    padding-left: 80px;
+}
+.footer-col2 img{
+    width:180px;
+    margin-bottom: 20px;
+}
+.footer-col3, .footer-col4{
+    flex-basis:12%;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.footer a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #8a8a8a;
+}
+.footer a:hover{
+    color: aqua;
+}
+.footer hr{
+    border: none;
+    background-color: #a5a5a5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* unused css not wanted to delete mehnat hai yar */
+.header_text{
+    font-size: 72px;
+    margin-left: 0 10%;
+    /* margin-right: 30%; */
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #0dc3c5, #5f5b97 , #8a3c88 );
+    -webkit-text-fill-color:transparent;
+    /* -webkit-background-clip: text; */
+    /* font-weight:550; */
+    /* padding-top:55px; */
+    /* text-shadow: 0px 0px; */
+    letter-spacing:2px;
+    word-spacing:3px;
+}
+
+/* .search_bar:hover{
+    background: black;
+}  */
+
+
+/* .col1 {
+    float :left;
+    margin: 70px 20px;
+    padding-left: 30px;
+    width: 25%;
+}
+.col2 {
+    padding-left: 103px;
+    margin: 70px 20px;
+    
+    width: 25%;
+}  */
+/* .col2 {
+    display: block;
+    position:i;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width:25%;
+} */
+/* .col3 {
+    float :right;
+    margin: 70px 20px;
+    padding-right: 30px;
+    width: 25%;
+} */

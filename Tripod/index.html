@@ -1,0 +1,391 @@
+<?php
+session_start();
+
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+
+    header("location: loginmain.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tripod | Ecommerce Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---FAV ICON INSERTED AT THE BEGGINNING OF TITLE-->
+        <link rel="shortcut icon" href="t-images\logo3.png">
+        <link rel="stylesheet" href="New Home page.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/358428d5f5.js" crossorigin="anonymous"></script>
+        
+    </head>
+    
+    <body>
+        <!-- header -->
+        <div id="grad1" >For The Gamers by The Tripod</div>
+        
+        
+        
+        
+        <!-- navigation menu -->
+        <nav id="navbar">
+            <a href="New Home page.html">
+                <img class="logo" src="Tripod logo.jpg" alt="tripod text logo">
+            </a>
+            
+            <a href="New Home page.html">Home</img>
+            <a href="#H1">Laptops</a>
+            <a href="#H2">Phones</a>
+            <a href="#H3">Consoles</a>
+
+            <div class="search_bar">
+                <!-- in action we requre a action.php page for working of search bar/engine -->
+                <form action="#">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Other Gaming Accessories <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#H4" style="float: none; text-align: left;">Gaming Keyboard</a>
+                    <a href="#H4" style="float: none; text-align: left;">Gaming Mouse</a>
+                    <a href="#H4" style="float: none; text-align: left;">Gamepad</a>
+                </div>
+            </div>
+            <div class="user_icon">
+                <div class="user_info"><i class="fas fa-user" style="color: aqua;"></i></div>
+                <div class="user_logout">Welcome, <?php echo $_SESSION['username']?><br><br><br><br><a href="/loginpage11/logout.php">logout</a></div>
+            </div>                
+        </nav>
+
+        
+        
+        
+        <!-- image on top -->
+        
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">            
+                <img src="t-images\pexels-Triton.jpg" style="width:100%; height:750px;" usemap="#image-map">
+                <map name="image-map">
+                    <area target="_self" title="Gaming Laptop" href="#H1" coords="956,160,1336,177,1334,435,1242,601,845,555,964,377"  shape="poly">
+                    <area target="_self" title="Gaming Keyboard" href="#H4"  coords="542,565,701,526,935,637,774,686,608,606"  shape="poly">
+                    <area target="_self" title="Gaming controller" href="#H2" coords="591,464,698,511,781,464,677,418" shape="poly">
+                    <area target="_self" title="Gaming Mouse" href="#H4" coords="1207,684,1327,691,1383,642,1281,608"  shape="poly">
+                    <area target="_self" title="Gaming Headset" href="#H4" coords="1391,657,1566,730,1695,662,1590,601,1441,562,1391,594"  shape="poly">
+                    <area target="_self" title="Gaming Chair" href="#H4" coords="311,106,437,123,464,306,562,457,494,705,111,708,131,513,233,389"  shape="poly">
+                </map>          
+            </div>            
+            <div class="mySlides fade">              
+              <img src="t-images\pexels-fox.jpg" style="width:100%; height:800px;">              
+            </div>            
+            <div class="mySlides fade">            
+              <img src="t-images\pexels-lucie.jpg" style="width:100%; height:750px;">              
+            </div>            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>            
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>            
+            
+            
+
+
+
+
+
+
+
+        <!-- products -->
+
+
+
+
+        <h2 id="H1">Gaming Laptop</h2>
+        
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <a class="product-box" href="https://tinyurl.com/y2h96fvf" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\dell-g7.jpg" alt="DEll G7" >
+                <p class="product-description">DELL G7 Core i9 10th Gen Intel/Geforce RTX 3090/32Gb RAM/ 2TB SSD<hr><b>Price: </b>₹1,79,990</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/4bj396f3" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\alienware.jpg" alt="ALIENWARE" >
+                <p class="product-description">ALIENWARE i9 10<sup>th</sup> Gen/Geforce RTX 3080/16 GB RAM/ 1TB SSD<hr><b>Price: </b>₹3,19,990</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/byhjtcw2" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\predator.jpg" alt="predator" >
+                <p class="product-description">Acer Predator Triton 300 i7 10<sup>th</sup>Gen Intel/ GeForce RTX 2070 with Max-Q Design/16GB RAM/2TB SSD<hr><b>Price: </b>₹1,59,990</p>
+            </a>           
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <a class="product-box" href="https://tinyurl.com/mk8bfnxm" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\Hp-omen 15.png" alt="Hp-omen 15" >
+                <p class="product-description">HP Omen Core i7 10th Gen/ GeForce GTX 1660/16GB RAM/ 512GB SSD/ Ghost lighing<hr><b>Price: </b>₹1,35,000</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/t783u33x" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\asus-rog-zephyrus1.jpg" alt="Asus zephyrus" >
+                <p class="product-description">ASUS ROG Zephyrus M15 i7 10<sup>th</sup> Gen Intel/ GeForce GTX 1660Ti/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹99,990</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/jtp38ec" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\lenovo-ideapad -3.jpg" alt="lenovo-ideapad" >
+                <p class="product-description">Lenovo Ideapad Gaming 3 Ryzen 7/GeForce GTX 1660Ti/ 8GB RAM/512GB SSD<hr><b>Price: </b>₹98,990</p>
+            </a>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <a class="product-box" href="https://tinyurl.com/assbdfd4" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\msi-gs75.jpg" alt="msi-gs75" >
+                <p class="product-description">MSI GL75 Stealth i9 10<sup>th</sup> Gen Intel/GeForce RTX 2070 Super Max-Q/300 Hz/ 32GB RAM/1TB SSD<hr><b>Price: </b>₹₹2,44,990</p>
+            </a>
+            <a class="product-box" href="https://www.razer.com/gaming-laptops/razer-blade" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\razer-blade 15.png" alt="Razer blade 15" >
+                <p class="product-description">Razer Blade 15 i9 11<sup>th</sup> Gen Intel/ Geforce RTX 3070/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹1,25,000</p>
+            </a>  
+            <a class="product-box" href="https://tinyurl.com/j78fcbuw" target="_blank">
+                <img class="imgofproduct" src="t-images\Laptops\Asus tuf.jpg" alt="Asus tuf A17" >
+                <p class="product-description">ASUS TUF Gaming A17 Ryzen 7/ Geforce 1660Ti/ 16GB RAM/ 1TB HDD/ 256GB SSD<hr>Price:₹92,990</p>
+            </a>           
+        </div>
+           
+        
+        
+        
+
+        <h2 id="H2">Gaming Phones</h2>
+
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <a class="product-box" href="https://tinyurl.com/d8r2ep48" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\oneplus9pro.jpg" >
+                <p class="product-description">Oneplus 9 Pro Snapdragon 888/12GB RAM/ 256GB Storage/120Hz Refresh Rate/ Super Amoled Fluid display<hr><b>Price: </b>₹64,999</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/7psdcp8n" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\Xiaomi Black Shark 4 Pro.jpg" >
+                <p class="product-description">Xiaomi Black Shark 4 Pro Snapdragon 888(5G)/16GB RAM/ 512GB Storage/144Hz Refresh Rate/ Super Amoled display<hr><b>Price: </b>₹59,999</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/u25bu33s" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\Asus rog phone 5.jpeg" >
+                <p class="product-description">ASUS ROG Phone 5 Snapdragon 888(5g)/ 12GB RAM/ 256GB Storage/ 144Hz Refresh Rate /AuraRGB LED lighting<hr><b>Price: </b>₹57,999</p>
+            </a>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <a class="product-box" href="https://tinyurl.com/twdrb4y2" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\IQOO 7.jpeg" >
+                <p class="product-description">IQOO 7 Snapdragon 888(5G)/12GB RAM/ 256GB Storage/120Hz AMOLED Display/ Liquid Cooling Technology<br><hr><b>Price: </b>₹35,990</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/y9wnumty" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\Iphone 12max pro.jpeg" >
+                <p class="product-description">Apple iPhone 12 Pro Max A14 Bionic chip/ 128GB Storage/ Super Retina XDR display/ Face ID<hr><b>Price: </b>₹1,24,700</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/sa7u4hsy" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming phone\poco X3.jpg" >
+                <p class="product-description">Poco X3 Pro  Snapdragon 860/ 8GB RAM/ 128GB Storage/ 90Hz Refresh Rate / Corning Gorilla Glass 6<hr>Price:₹21,990</p>
+            </a>
+        </div>
+
+
+        
+        
+        <h2 id="H3">Consoles</h2>
+
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <a class="product-box" href="https://www.playstation.com/en-in/ps5/" target="_blank">
+                <img class="imgofproduct" src="t-images\Consoles\PS-5.jpeg" >
+                <p class="product-description">SONY PlayStation 5 825 GB with Astro's Playroom (White)/ 4K-TV gaming/ Up to 120fps with 120Hz output/ HDR technology 8K support<hr>Price:₹49,990</p>
+            </a>
+            <a class="product-box" href="https://www.xbox.com/en-IN/consoles/xbox-series-x" target="_blank">
+                <img class="imgofproduct" src="t-images\Consoles\xbox.jpg" >
+                <p class="product-description">MICROSOFT Xbox Series X 1024 GB (Black)/ TRUE 4K Gaming/ upto 120FPS/ 8K High Dynamic Range/ Xbox Velocity Architecture<hr><b>Price: </b>₹49,990</p>
+            </a>
+            <a class="product-box" href="https://www.nintendo.com/switch/" target="_blank">
+                <img class="imgofproduct" src="t-images\Consoles\Nintendo Switch.png" >
+                <p class="product-description">Nintendo Switch (Handheld console)/ 64 GB/ Joy-Con controllers/ upto 9hours battery life<hr><b>Price: </b>₹25,999</p>
+            </a>
+        </div>
+        
+        
+        
+        
+        <h2 id="H4">Gaming Keyboard and Mouse</h2>
+        
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <a class="product-box" href="https://tinyurl.com/uzu6ehw7" target="_blank">
+                    <img class="imgofproduct" src="t-images\Gaming accessories\Logitech G213 Wired USB Gaming Keyboard.jpeg">
+                    <p class="product-description">Logitech G213 Gaming Keyboard with Dedicated Media Controls/ 16.8 Million Lighting Colors Backlit Keys<hr><b>Price: </b>₹4,299</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/9rpscs" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\HyperX Alloy Core RGB1.jpg">
+                <p class="product-description">HyperX Alloy Core RGB Membrane Gaming Keyboard / 5 Zones multi-color/ responsive keys with anti-ghosting<br><hr><b>Price: </b>₹4,790</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/aceahv4y" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\Razer Huntsman Elite.jpg">
+                <p class="product-description">RAZER HUNTSMAN ELITE: Opto-Mechanical Switch/ Leatherette Wrist Rest/ 4-Side Underglow / Gaming Keyboard<hr><b>Price: </b>₹26,000</p>
+            </a>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <a class="product-box" href="https://tinyurl.com/4244ayjv" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\Razer Death Wired Optical Gaming Mouse1.jpg" >
+                <p class="product-description">Razer Death Adder Essential Wired Optical Gaming Mouse  (USB 3.0, Black)<hr><b>Price: </b>₹1,599</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/2672awa9" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\Logitech G402 Wired Optical Gaming Mouse.jpg" >
+                <p class="product-description">Logitech G402 Wired Optical Gaming Mouse  (USB 2.0, Black)<hr><b>Price: </b>₹2,490</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/tht9s2yc" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\RAZER RAIJU Gamepad.jpg" >
+                <p class="product-description">Acer Predator Triton 300 i7 10<sup>10th</sup>Gen Intel/ GeForce RTX 2070 with Max-Q Design/16GB RAM/2TB SSD<hr><b>Price: </b>₹1,59,990</p>
+            </a>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <a class="product-box" href="https://tinyurl.com/3cp5ku7s" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\Cosmic Byte Thunder Gamepad.jpg" >
+                <p class="product-description">Cosmic Byte Nebula 2.4G Wireless Gamepad supports Windows 7 and above/ Rubberized Texture<hr><b>Price: </b>₹1,619</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/44r4x2at" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\ASUS RGB CHAIR.jpg" >
+                <p class="product-description">ROG Chariot Gaming Chair/ RGB gaming chair in racing car style/ 4D armrests/ durable class 4 gas lift<hr><b>Price: </b>₹89,999</p>
+            </a>
+            <a class="product-box" href="https://tinyurl.com/zymppm47" target="_blank">
+                <img class="imgofproduct" src="t-images\Gaming accessories\Acer Predator LK 8103.jpg" >
+                <p class="product-description">Predator Gaming Chair/ Tension Minimizing Body-Hugging Design/ Premium PVC Leather/ Up To 180° Seat Recline<hr><b>Price: </b>₹78,990</p>
+            </a>
+        </div>
+
+
+
+        
+        <!-- our team -->
+        <div class="ex">
+            <hr>
+            <h1>Our Team</h1>
+            <div style="display:flex; flex-direction: row; margin-top: 100px;">
+                <div class="ourteam">
+                    <img src="t-images\Ritik.jpg" class="ourteam_img" draggable="false">
+                    <p>RITIK RAJ</p>
+                </div>
+                <div class="ourteam">
+                    <img src="t-images\Jatin.jpg" class="ourteam_img" draggable="false">
+                    <p>JATIN KARTIK</p>
+                </div>
+                <div class="ourteam">
+                    <img src="t-images\kamal.jpeg" class="ourteam_img" draggable="false">
+                    <p>KAMAL KUMAR</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+        
+        
+        
+
+    
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col1">
+                        <h3>About Us</h3>
+                        <p>TRIPOD site has been made uniquely for the die heart gamers. Look at our month to month refreshed moving gaming embellishments list only accessible on MRP and guaranteed quick conveyed by outsider logistics.Every gamer who shop from us are TRIPODians.</p>
+                    </div>
+                    <div class="footer-col2">
+                        <img src="t-images\Triopd Brand.jpg">
+                    </div>
+                    <div class="footer-col3">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="#H1">Gaming Laptop</a></li>
+                            <li><a href="#H2">Gaming Phones</a></li>
+                            <li><a href="#H3">Consoles</a></li>
+                            <li><a href="#H4">Other Gaming Accessories</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer-col4">
+                        <h3>Follow us on</h3>
+                        <ul>
+                            <li><a href="https://github.com/Erzmafia/project-alpha" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+                            <li><a href="https://twitter.com/KamL4126" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="https://www.linkedin.com/in/jatinkartik" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                            <li><a href="https://www.instagram.com/rck.rj.o5" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2021 - Tripod</p>
+            </div>
+        </div>
+        
+        
+        <script>
+            
+            
+            
+            // slideshow- carousel
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);            
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }            
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction(){
+                if(window.pageYOffset >=sticky){
+                    navbar.classList.add("sticky");
+                }
+                else {
+                    navbar.classList.remove("sticky");                
+                }
+            }
+
+            // var slideIndex = 0;
+            // showSlides();
+            
+            // function showSlides() {
+                //   var i;
+                //   var slides = document.getElementsByClassName("mySlides");
+                //   for (i = 0; i < slides.length; i++) {
+                    //     slides[i].style.display = "none";
+                    //   }
+                    //   slideIndex++;
+                    //   if (slideIndex > slides.length) {slideIndex = 1}
+            //   slides[slideIndex-1].style.display = "block";
+            //   setTimeout(showSlides, 7000); // Change image every 7 seconds
+            // }
+            
+            
+            
+        </script>
+    </body>
+</html>
